@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistem Absensi Barcode - MI ITB</title>
+    <!-- Favicon Tab Browser (Opsional: ikut memakai logo.png) -->
+    <link rel="icon" type="image/png" href="logo.png">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Inter -->
@@ -57,8 +59,13 @@
     <header class="bg-gradient-to-r from-emerald-800 via-emerald-700 to-teal-700 text-white shadow-lg sticky top-0 z-40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap items-center justify-between gap-4">
             <div class="flex items-center space-x-3">
-                <div class="bg-white/10 p-2.5 rounded-xl backdrop-blur-sm border border-white/20">
-                    <i class="fa-solid fa-qrcode text-2xl text-amber-300"></i>
+                <!-- AREA LOGO SEKOLAH (Otomatis memuat 'logo.png', jika belum ada akan tampil ikon cadangan) -->
+                <div class="bg-white/15 p-1.5 rounded-xl backdrop-blur-sm border border-white/25 flex items-center justify-center w-12 h-12 shrink-0 overflow-hidden">
+                    <img src="logo.png" 
+                         alt="Logo MI ITB" 
+                         class="w-full h-full object-contain rounded-lg"
+                         onerror="this.style.display='none'; document.getElementById('fallbackLogoIcon').classList.remove('hidden');">
+                    <i id="fallbackLogoIcon" class="hidden fa-solid fa-qrcode text-2xl text-amber-300"></i>
                 </div>
                 <div>
                     <h1 class="text-lg sm:text-xl font-bold tracking-tight leading-tight">E-ABSENSI MI ITB</h1>
